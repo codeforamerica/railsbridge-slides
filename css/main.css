@@ -168,6 +168,10 @@ body {
 	margin-left: 40px;
 }
 
+.reveal li {
+  margin-bottom: 10px;
+}
+
 .reveal p {
 	margin-bottom: 10px;
 }
@@ -208,6 +212,10 @@ body {
 
 .reveal code {
 	font-family: monospace;
+}
+
+.reveal h2 code {
+  font-family: 'League Gothic', sans-serif;
 }
 
 .reveal table th, 
