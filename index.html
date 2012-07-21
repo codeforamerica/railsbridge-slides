@@ -1,309 +1,244 @@
 <!doctype html>  
 <html lang="en">
-	
-	<head>
-		<meta charset="utf-8">
-		
-		<title>reveal.js - HTML5 Presentations</title>
-
-		<meta name="description" content="An easy to use CSS 3D slideshow tool for quickly creating good looking HTML presentations.">
-		<meta name="author" content="Hakim El Hattab">
-
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-		
-		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-		
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/main.css">
-		<link rel="stylesheet" href="css/print.css" type="text/css" media="print">
-
-		<link rel="stylesheet" href="lib/css/zenburn.css">
-	</head>
-	
-	<body>
-		
-		<div class="reveal">
-
-			<!-- Used to fade in a background when a specific slide state is reached -->
-			<div class="state-background"></div>
-			
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section>
-					<h1>Reveal.js</h1>
-					<h3 class="inverted">CSS 3D Presentations</h3>
-					<script>
-						// Delicously hacky. Look away.
-						if( navigator.userAgent.match( /(iPhone|iPad|iPod|Android)/i ) ) document.write( '<p style="color: rgba(0,0,0,0.3); text-shadow: none;">('+'Tap to navigate'+')</p>' );
-					</script>
-				</section>
-				
-				<section>
-					<h2>Heads Up</h2>
-					<p>
-						reveal.js is an easy to use, HTML based, presentation tool. You'll need a modern browser with 
-						support for CSS 3D transforms to see it in its full glory.
-					</p>
-					<p>
-						<i><small>- <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small></i>
-					</p>
-
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you run the speaker notes server.
-					</aside>
-				</section>
-				
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>
-							Slides can be nested inside of other slides,<br/>
-							try pressing <a href="#/2/1">down</a>.
-						</p>
-						<a href="#/2/1" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Press down or up to navigate.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>Cornify</p>
-						<a class="test" href="http://cornify.com">
-							<img width="280" height="326" src="https://s3.amazonaws.com/hakim-static/reveal-js/cornify.gif">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 3</h2>
-						<p>That's it, time to go back up.</p>
-						<a href="#/2" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" style="-webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
-
-				<section>
-					<h2>Holistic Overview</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview!
-					</p>
-				</section>
-
-				<section>
-					<h2>Works in Mobile Safari</h2>
-					<p>
-						Try it out! You can swipe through the slides pinch your way to the overview.
-					</p>
-				</section>
-
-				<section>
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like:
-					</p>
-					<ul>
-						<li><a href="http://lab.hakim.se/reveal-js/?transition=cube">Cube</a></li>
-						<li><a href="http://lab.hakim.se/reveal-js/?transition=page">Page</a></li>
-						<li><a href="http://lab.hakim.se/reveal-js/?transition=concave">Concave</a></li>
-						<li><a href="http://lab.hakim.se/reveal-js/?transition=linear">Linear</a></li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Marvelous Unordered List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
-				
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
-
-				<section>
-					<section data-state="alert">
-						<h2>Global State</h2>
-						<p>
-							Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-							will be added as a class to the document element when the slide is open. This let's you
-							apply broader style changes, like switching the background.
-						</p>
-						<a href="#/7/1" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
-						</a>
-					</section>
-					<section data-state="blackout">
-						<h2>"blackout"</h2>
-						<a href="#/7/2" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
-						</a>
-					</section>
-					<section data-state="soothe">
-						<h2>"soothe"</h2>
-						<a href="#/7/0" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" style="-webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
-
-				<section data-state="customevent">
-					<h2>Custom Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code contenteditable style="font-size: 18px; margin-top: 20px;">Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
-
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						The nice thing about standards is that there are so many to choose from</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						For years there has been a theory that millions of monkeys typing at random on millions of typewriters would 
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.
-					</blockquote>
-				</section>
-				
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
+  
+  <head>
+    <meta charset="utf-8">
     
-    var nodes = document.querySelectorAll( selector );
+    <title>RailsBridge Ruby Workshop at Code for America</title>
 
-    for( var i = 0, len = nodes.length; i < len; i++ ) {
-      var node = nodes[i];
+    <meta name="description" content="Slides and links to a full-day Ruby immersion workshop">
+    <meta name="author" content="RailsBridge & Code for America">
 
-      if( !node.className ) ) {
-        node.className += ' roll';
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/print.css" type="text/css" media="print">
+
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+  </head>
+  
+  <body>
+    
+    <div class="reveal">
+
+      <!-- Used to fade in a background when a specific slide state is reached -->
+      <div class="state-background"></div>
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <h1>Ruby on Rails Workshop</h1>
+          <h3 class="inverted">July 20 & 21, 2012 &middot; San Francisco</h3>
+          <p>
+            <img src="img/logo-cfa.png" alt="Code for America" width="200"> + 
+            <img src="img/logo-railsbridge.png" alt="RailsBridge" width="200"> + 
+            <img src="img/logo-oreilly.gif" alt="OReilly Media" width="200">
+          </p>
+        </section>
+        
+        <section>
+          <h1>Where are we?</h1>
+          <p><img src="img/logo-cfa.png" alt="Code for America" width="100%" /></p>
+        </section>
+        
+        <section>
+          <h1>Today is open source.</h1>
+          
+          <p>This workshop is a community project to<br> which many individuals have contributed.</p>
+          <p>All of the materials are open!</p>
+          <ul>
+            <li>RailsBridge's <a href="http://wiki.railsbridge.org/projects/railsbridge/wiki/Workshops">Open Workshop Project</a></li>
+            <li>RailsBridge's <a href="http://github.com/railsbridge">GitHub page</a></li>
+            <li>Curriculum: <a href="http://curriculum.railsbridge.org">curriculum.railsbridge.org</a></li>
+          </ul>
+        </section>
+        
+        <!-- Example of nested vertical slides -->
+        <section>
+          <section>
+            <h2>Why are we here?</h2>
+            <p>To learn Ruby on Rails!</p>
+            <p>&nbsp;</p>
+            <h2 class="fragment">And What's that?</h2>
+            <div  class="fragment">
+              <p>Great question.</p>
+              <p>First, a brief digression&hellip;</p>
+              <p>&hellip; into web application plumbing.</p>
+              <p class="fragment">(No plungers necessary.)</p>
+            </div>
+          </section>
+          <section>
+            <h2>Web Application Plumbing</h2>
+            <p><img src="img/diagram-webapp.png" alt="Diagram of a generalized web application." width="715" height="490" /></p>
+          </section>
+          <section>
+            <h2>Ruby is a programming language.</h2>
+            <ul>
+              <li class="fragment">First released in 1995.</li>
+              <li class="fragment">It's an object-oriented, general-purpose language.</li>
+              <li class="fragment"><code>&lt;opinion></code>It's quite nice.<code>&lt;/opinion></code></li>
+            </ul>
+            <p>&nbsp;</p>
+            <pre class="fragment"><code># Outputs "I love Ruby"
+say = "I love Ruby"
+puts say
+ 
+# Outputs "I *LOVE* RUBY"
+say['love'] = "*love*"
+puts say.upcase
+ 
+# Outputs "I *love* Ruby" five times
+5.times { puts say }</code></pre>
+          </section>
+          <section>
+            <h2>Rails is a framework.</h2>
+            <p>Frameworks are collections of scripts and utilities<br>that simplify writing web applications.</p>
+            <p>So what makes Rails special?</p>
+            <ul>
+              <li class="fragment">It's written in the Ruby language.</li>
+              <li class="fragment">It's <strong>opinionated</strong>.</li>
+              <li class="fragment">It emphasizes <strong>convention over configuration</strong>.</li>
+              <li class="fragment">It encourages <strong>DRY</strong> -- Don't Repeat Yourself -- coding.</li>
+              <li class="fragment">It's database-agnostic.</li>
+              <li class="fragment">First developed by @dhh of 37signals.</li>
+              <li class="fragment">Open-sourced in 2004; shipped w/ Mac OS 10.5 in 2007.</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Putting it all together...</h2>
+            <br>
+            <h3>Rails is a <u>FRAMEWORK</u> for <u>WEB APPLICATIONS</u> written in the Ruby <u>LANGUAGE</u>.</h3>
+            <p>
+              <img src="img/logo-ruby.jpg" alt="ruby-logo" height="100">
+              <span style="font-size: 3em;"> + </span>
+              <img src="img/logo-rails.jpg" alt="rails_logo" height="100">
+              <span style="font-size: 3em;"> = </span>
+              <span style="font-size: 6em;">&#x2665;</span>
+            </p>
+          </section>
+        </section>
+
+        <section>
+          <h2>What are we doing today?</h2>
+          <br>
+          <h3>Some of us will learn Ruby from the ground up.</h3>
+          <p>Focus on learning to program.</p>
+          <br>
+          <h3>Some of us will learn Rails, Heroku, and GitHub.</h3>
+          <p>Focus on tools and building web applications.</p>
+          <p class="fragment"><br>(We'll talk more about this in a sec.)</p>
+        </section>
+
+        <section>
+          <h2>What tools &amp; services will we use?</h2>
+          <ul>
+            <li class="fragment"><b>rails</b>: a web application framework written in Ruby.</li>
+            <li class="fragment"><b>rake</b>: like <code>make</code> for Ruby. An easy way to run tasks.</li>
+            <li class="fragment"><b>database</b>: we'll use SQLite, but could be any relational database.</li>
+            <li class="fragment"><b>editor</b>: KomodoEdit or your favorite text editor.</li>
+            <li class="fragment"><b>heroku</b>: free hosting for Rails applications.</li>
+          </ul>
+        </section>
+
+        <section data-state="soothe">
+          <h2>Schedule</h2>
+          <ul>
+          <li>9 - 9:30am: Sign in, coffee, breakfast</li>
+          <li>9:30 - 10am: Intro!</li>
+          <li>10 - 10:50am: Session 1</li>
+          <li>11 - 12pm: Session 2</li>
+          <li>12 - 1pm: Lunch!</li>
+          <li>1 - 2:30pm: Session 3</li>
+          <li>2:45 - 4:15pm: Session 4</li>
+          <li>4:15 - 5pm: Wrapup and final questions</li>
+          <li>5pm - onward: Beer O'Clock. Happy hour at Azucar!</li>
+          </ul>
+        </section>
+
+        <section data-state="alert">
+          <h1>Ask Questions!</h1>
+          <p>No such thing as a dumb question. For serious.<br><br><br></p>
+          <h1>Don't be shy!</h1>
+          <p>TAs and teachers are here to help.</p>
+        </section>
+        
+        <section>
+          <h2>Pick a section</h2>
+          [TBD]
+        </section>
+        
+        <section>
+          <h1>Ready? Break!</h1>
+          <p><img src="img/ready-break.jpg" alt="ready-break" width="500" height="354" /></p>
+        </section>
+
+      </div>
+
+      <!-- The navigational controls UI -->
+      <aside class="controls">
+        <a class="left" href="#">&#x25C4;</a>
+        <a class="right" href="#">&#x25BA;</a>
+        <a class="up" href="#">&#x25B2;</a>
+        <a class="down" href="#">&#x25BC;</a>
+      </aside>
+
+      <!-- Displays presentation progress, max value changes via JS to reflect # of slides -->
+      <div class="progress"><span></span></div>
+      
+    </div>
+
+    <!-- Optional libraries for code syntax highlighting and classList support in IE9 -->
+    <script src="lib/js/head.min.js"></script>
+
+    <script>
+      // Load the main reveal.js script
+      head.js( 'js/reveal.js', function() {
+        // Parse the query string into a key/value object
+        var query = {};
+
+        location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
+          query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
+        } );
+
+        // Fires when a slide with data-state=customevent is activated
+        Reveal.addEventListener( 'customevent', function() {
+          console.log( '"customevent" has fired' );
+        } );
+
+        // Fires each time a new slide is activated
+        Reveal.addEventListener( 'slidechanged', function( event ) {
+          // event.previousSlide, event.currentSlide, event.indexh, event.indexv
+        } );
+
+        // Full list of configuration options available here:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+          controls: true,
+          progress: true,
+          history: true,
+          
+          theme: query.theme || 'default', // default/neon/beige
+          transition: query.transition || 'default' // default/cube/page/concave/linear(2d)
+        });
+      } );
+      
+      // Load third party scripts
+      head.js( 'lib/js/classList.js' );
+      head.js( 'lib/js/highlight.js', function() {
+        // Fire off syntax highlighting for potential code samples in the slides
+        hljs.initHighlightingOnLoad();
+      } );
+
+      // If we're runnning the notes server we need to include some additional JS
+      // TODO Is there a better way to determine if we're running the notes server?
+      if( window.location.host === 'localhost:1947' ) {
+        head.js( 'socket.io/socket.io.js', 'plugin/speakernotes/client.js' );
       }
-    };
-  }
-}
-					</code></pre>
-					<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
-				
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,<br/>
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Fragmented Views</h2>
-					<p>Hit the next arrow...</p>
-					<p class="fragment">... to step through ...</p>
-					<ol>
-						<li class="fragment"><code>any type</code></li>
-						<li class="fragment"><em>of view</em></li>
-						<li class="fragment"><strong>fragments</strong></li>
-					</ol>
-				</section>
-				
-				<section>
-					<h2>Spectacular image!</h2>
-					<a class="image" href="http://hakim.se/experiments/html5/breakdom/" target="_blank">
-						<img width="320" height="412" src="https://s3.amazonaws.com/hakim-static/reveal-js/breakdom.png">
-					</a>
-				</section>
-				
-				<section>
-					<h2>Stellar Links</h2>
-					<ul>
-						<li><a href="https://github.com/hakimel/reveal.js">Source code on github</a></li>
-						<li><a href="http://hakim.se/projects/reveal-js">Read more on my site</a></li>
-						<li><a href="http://twitter.com/hakimel">Follow me on Twitter</a></li>
-					</ul>
-				</section>
-				
-				<section>
-					<h1>THE END</h1>
-					<h3 class="inverted">BY Hakim El Hattab / hakim.se</h3>
-				</section>
-			</div>
-
-			<!-- The navigational controls UI -->
-			<aside class="controls">
-				<a class="left" href="#">&#x25C4;</a>
-				<a class="right" href="#">&#x25BA;</a>
-				<a class="up" href="#">&#x25B2;</a>
-				<a class="down" href="#">&#x25BC;</a>
-			</aside>
-
-			<!-- Displays presentation progress, max value changes via JS to reflect # of slides -->
-			<div class="progress"><span></span></div>
-			
-		</div>
-
-		<!-- Optional libraries for code syntax highlighting and classList support in IE9 -->
-		<script src="lib/js/head.min.js"></script>
-
-		<script>
-			// Load the main reveal.js script
-			head.js( 'js/reveal.js', function() {
-				// Parse the query string into a key/value object
-				var query = {};
-
-				location.search.replace( /[A-Z0-9]+?=(\w*)/gi, function(a) {
-					query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
-				} );
-
-				// Fires when a slide with data-state=customevent is activated
-				Reveal.addEventListener( 'customevent', function() {
-					console.log( '"customevent" has fired' );
-				} );
-
-				// Fires each time a new slide is activated
-				Reveal.addEventListener( 'slidechanged', function( event ) {
-					// event.previousSlide, event.currentSlide, event.indexh, event.indexv
-				} );
-
-				// Full list of configuration options available here:
-				// https://github.com/hakimel/reveal.js#configuration
-				Reveal.initialize({
-					controls: true,
-					progress: true,
-					history: true,
-					
-					theme: query.theme || 'default', // default/neon/beige
-					transition: query.transition || 'default' // default/cube/page/concave/linear(2d)
-				});
-			} );
-			
-			// Load third party scripts
-			head.js( 'lib/js/classList.js' );
-			head.js( 'lib/js/highlight.js', function() {
-				// Fire off syntax highlighting for potential code samples in the slides
-				hljs.initHighlightingOnLoad();
-			} );
-
-			// If we're runnning the notes server we need to include some additional JS
-			// TODO Is there a better way to determine if we're running the notes server?
-			if( window.location.host === 'localhost:1947' ) {
-				head.js( 'socket.io/socket.io.js', 'plugin/speakernotes/client.js' );
-			}
-		</script>
-		
-	</body>
+    </script>
+    
+  </body>
 </html>
